@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_87f265991e0c4defdbe6ab621eeaab24 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_87f265991e0c4defdbe6ab621eeaab24" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_87f265991e0c4defdbe6ab621eeaab24 = L.map(
+                "map_87f265991e0c4defdbe6ab621eeaab24",
+                {
+                    center: [35.308495199999996, 24.46334231842296],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_04510ad1316b90e39ce471a9486cf848 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_87f265991e0c4defdbe6ab621eeaab24);
+        
+    
+            var tile_layer_0ab77f7b7356cb9deccbc29e7c5a972a = L.tileLayer(
+                "https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=5b930589f5a84fadae7a819b39c0b711",
+                {"apikey": "5b930589f5a84fadae7a819b39c0b711\u003e", "attribution": "\u0026copy; \u003ca href=\"http://www.thunderforest.com/\"\u003eThunderforest\u003c/a\u003e, \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 22, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_87f265991e0c4defdbe6ab621eeaab24);
+        
+    
+            var marker_cluster_1487281088721904048837bd0cd9e9cf = L.markerClusterGroup(
+                {}
+            );
+            map_87f265991e0c4defdbe6ab621eeaab24.addLayer(marker_cluster_1487281088721904048837bd0cd9e9cf);
+        
+    
+            var marker_3453f490f2b01f92d968d656dc52de16 = L.marker(
+                [35.435442699999996, 23.90346578432241],
+                {"name": "Chania"}
+            ).addTo(marker_cluster_1487281088721904048837bd0cd9e9cf);
+        
+    
+            var icon_d57998994059a5b5249741da00fe33ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3453f490f2b01f92d968d656dc52de16.setIcon(icon_d57998994059a5b5249741da00fe33ba);
+        
+    
+        var popup_4a2b0251d7f5d69106debdd4ecabc3b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75ec5405985336eff512c44db71d0eaf = $(`<div id="html_75ec5405985336eff512c44db71d0eaf" style="width: 100.0%; height: 100.0%;">             <body style="background-color:WHITE;"><p style="color:black;font-family:Calibri;font-size: 21px;">Prefecture of Chania</p>             <!--<iframe src=CHANION.png "" width="300" height="300"  frameborder="0" scale="0.5">-->             <img src=CHANION.png  style="width:400;height:auto;">             </div>`)[0];
+                popup_4a2b0251d7f5d69106debdd4ecabc3b3.setContent(html_75ec5405985336eff512c44db71d0eaf);
+            
+        
+
+        marker_3453f490f2b01f92d968d656dc52de16.bindPopup(popup_4a2b0251d7f5d69106debdd4ecabc3b3)
+        ;
+
+        
+    
+    
+            var marker_b290d3f10e6d1074a8a8f150e3d8f948 = L.marker(
+                [35.214857699999996, 24.545374592759217],
+                {"name": "Rethymno"}
+            ).addTo(marker_cluster_1487281088721904048837bd0cd9e9cf);
+        
+    
+            var icon_508b31fe22ac81fc9556e71f9df66e9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b290d3f10e6d1074a8a8f150e3d8f948.setIcon(icon_508b31fe22ac81fc9556e71f9df66e9b);
+        
+    
+        var popup_cee41dde699221c87ec762c055c3adff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df9196faf2060e48390ee453bd4bf8f8 = $(`<div id="html_df9196faf2060e48390ee453bd4bf8f8" style="width: 100.0%; height: 100.0%;">             <body style="background-color:WHITE;"><p style="color:black;font-family:Calibri;font-size: 21px;">Prefecture of Rethymno</p>             <!--<iframe src=RETHYMNOU.png "" width="300" height="300"  frameborder="0" scale="0.5">-->             <img src=RETHYMNOU.png  style="width:400;height:auto;">             </div>`)[0];
+                popup_cee41dde699221c87ec762c055c3adff.setContent(html_df9196faf2060e48390ee453bd4bf8f8);
+            
+        
+
+        marker_b290d3f10e6d1074a8a8f150e3d8f948.bindPopup(popup_cee41dde699221c87ec762c055c3adff)
+        ;
+
+        
+    
+    
+            var marker_af594575fb62486c758095353ae8d927 = L.marker(
+                [35.19296730000001, 25.156624337132683],
+                {"name": "Irakleio"}
+            ).addTo(marker_cluster_1487281088721904048837bd0cd9e9cf);
+        
+    
+            var icon_a920c79720fe2bd8a479e41f005da68d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_af594575fb62486c758095353ae8d927.setIcon(icon_a920c79720fe2bd8a479e41f005da68d);
+        
+    
+        var popup_05de7b46b2d46dafda1b435ce83d6ce9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20ce703323dab95dca2cc5bb1a5574bc = $(`<div id="html_20ce703323dab95dca2cc5bb1a5574bc" style="width: 100.0%; height: 100.0%;">             <body style="background-color:WHITE;"><p style="color:black;font-family:Calibri;font-size: 21px;">Prefecture of Irakleio</p>             <!--<iframe src=IRAKLEIOU.png "" width="300" height="300"  frameborder="0" scale="0.5">-->             <img src=IRAKLEIOU.png  style="width:400;height:auto;">             </div>`)[0];
+                popup_05de7b46b2d46dafda1b435ce83d6ce9.setContent(html_20ce703323dab95dca2cc5bb1a5574bc);
+            
+        
+
+        marker_af594575fb62486c758095353ae8d927.bindPopup(popup_05de7b46b2d46dafda1b435ce83d6ce9)
+        ;
+
+        
+    
+    
+            var marker_e1c5f91512df388fcefdc165f56f0a29 = L.marker(
+                [35.12413185, 25.906016743742015],
+                {"name": "Lasithi"}
+            ).addTo(marker_cluster_1487281088721904048837bd0cd9e9cf);
+        
+    
+            var icon_06b7f205f6117f5b15dcf013c8a47d3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e1c5f91512df388fcefdc165f56f0a29.setIcon(icon_06b7f205f6117f5b15dcf013c8a47d3e);
+        
+    
+        var popup_38a26ee2cd2c15dd7b90147b32f4ac4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59750aea54c4dc502d31978f1a04cc16 = $(`<div id="html_59750aea54c4dc502d31978f1a04cc16" style="width: 100.0%; height: 100.0%;">             <body style="background-color:WHITE;"><p style="color:black;font-family:Calibri;font-size: 21px;">Prefecture of Lasithi</p>             <!--<iframe src=LASITHIOU.png "" width="300" height="300"  frameborder="0" scale="0.5">-->             <img src=LASITHIOU.png  style="width:400;height:auto;">             </div>`)[0];
+                popup_38a26ee2cd2c15dd7b90147b32f4ac4a.setContent(html_59750aea54c4dc502d31978f1a04cc16);
+            
+        
+
+        marker_e1c5f91512df388fcefdc165f56f0a29.bindPopup(popup_38a26ee2cd2c15dd7b90147b32f4ac4a)
+        ;
+
+        
+    
+    
+            var marker_cluster_1487281088721904048837bd0cd9e9cfsearchControl = new L.Control.Search({
+                layer: marker_cluster_1487281088721904048837bd0cd9e9cf,
+                
+                propertyName: 'name',
+                
+                collapsed: true,
+                textPlaceholder: 'Search for location',
+                position:'topleft',
+            
+                initial: false,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                marker_cluster_1487281088721904048837bd0cd9e9cfsearchControl.on('search:locationfound', function(e) {
+                    marker_cluster_1487281088721904048837bd0cd9e9cf.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                marker_cluster_1487281088721904048837bd0cd9e9cfsearchControl.on('search:collapsed', function(e) {
+                        marker_cluster_1487281088721904048837bd0cd9e9cf.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_87f265991e0c4defdbe6ab621eeaab24.addControl( marker_cluster_1487281088721904048837bd0cd9e9cfsearchControl );
+
+        
+</script>
+</html>
