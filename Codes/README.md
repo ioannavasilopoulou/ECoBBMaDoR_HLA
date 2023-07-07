@@ -1,5 +1,4 @@
-# Calculation of Fixation Index (Fst)
-
+# Calculation of Fixation Index (Fis-Fst)
 This repository contains a Python code for performing various calculations and analyses related to allele frequencies, heterozygosity, and F-statistics. The code is organized into several functions that can be used in a pipeline to process genetic data.
 
 ## Usage
