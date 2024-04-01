@@ -5,6 +5,10 @@ import warnings, argparse
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
+'''
+How to Run the script: python prevostis.py --metric (for prevostis)
+'''
+
 user_path = '/Users/vasou/Documents/HLA/Matching Coverage/Estimated_Haplotypes/'
 def haplomat_output_parce(hfs_dat, n):
     with open(hfs_dat) as f:
